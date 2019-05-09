@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout  xmlns:android="http://schemas.android.com/apk/res/android"
+         xmlns:tools="http://schemas.android.com/tools"
+         xmlns:app="http://schemas.android.com/apk/res-auto">
+<android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+    <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/testimage"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" android:id="@+id/image_test"/>
+    <Button
+            android:text="Fade  x"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_fadex"
+            android:onClick="fadeX"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="13dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="6dp"
+            android:layout_marginStart="6dp" app:layout_constraintEnd_toStartOf="@+id/btn_rotatex"
+            android:layout_marginEnd="12dp" android:layout_marginRight="12dp"/>
+    <Button
+            android:text="Rotate X"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_rotatex"
+            android:onClick="rotateX"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="13dp"
+            app:layout_constraintEnd_toStartOf="@+id/btn_scalex" android:layout_marginEnd="11dp"
+            android:layout_marginRight="11dp" app:layout_constraintStart_toEndOf="@+id/btn_fadex"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp"/>
+    <Button
+            android:text="Scale X"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="scaleX"
+            android:id="@+id/btn_scalex" app:layout_constraintEnd_toStartOf="@+id/btn_translatex"
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+            app:layout_constraintStart_toEndOf="@+id/btn_rotatex" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" android:layout_marginBottom="13dp"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    <Button
+            android:text="Translate x"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="translateX"
+            android:id="@+id/btn_translatex" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_scalex" android:layout_marginRight="8dp"
+            android:layout_marginEnd="8dp" android:layout_marginBottom="13dp"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    <Button
+            android:text="Fade P"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="fadeP"
+            android:id="@+id/btn_fadep" app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="6dp"
+            android:layout_marginStart="6dp" android:layout_marginBottom="14dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_fadex" app:layout_constraintEnd_toStartOf="@+id/btn_rotatep"
+            android:layout_marginEnd="12dp" android:layout_marginRight="12dp"/>
+    <Button
+            android:text="Rotate P"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="rotateP"
+            android:id="@+id/btn_rotatep" android:layout_marginLeft="12dp" android:layout_marginStart="12dp"
+            app:layout_constraintStart_toEndOf="@+id/btn_fadep" app:layout_constraintEnd_toStartOf="@+id/btn_scalep"
+            android:layout_marginEnd="11dp" android:layout_marginRight="11dp"
+            android:layout_marginBottom="13dp" app:layout_constraintBottom_toTopOf="@+id/btn_rotatex"/>
+    <Button
+            android:text="Scale P"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="scaleP"
+            android:id="@+id/btn_scalep" android:layout_marginLeft="11dp" android:layout_marginStart="11dp"
+            app:layout_constraintStart_toEndOf="@+id/btn_rotatep"
+            app:layout_constraintEnd_toStartOf="@+id/btn_translatep" android:layout_marginEnd="1dp"
+            android:layout_marginRight="1dp" android:layout_marginBottom="14dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_scalex"/>
+    <Button
+            android:text="Translate P"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="translateP"
+            android:id="@+id/btn_translatep" android:layout_marginBottom="14dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_translatex" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginLeft="1dp" android:layout_marginStart="1dp"
+            app:layout_constraintStart_toEndOf="@+id/btn_scalep" android:layout_marginRight="8dp"
+            android:layout_marginEnd="8dp"/>
+
+</android.support.constraint.ConstraintLayout></layout>
